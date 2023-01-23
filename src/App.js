@@ -1,8 +1,6 @@
-import { BrowserRouter as Router } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom';
 import Layout from './Layout/Layout';
 import './App.css';
-console.log('zaki')
-console.log('medo')
 
 const App = () => (
   <Router>
