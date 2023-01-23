@@ -1,0 +1,83 @@
+.team {
+  padding: var(--main-padding);
+  position: relative;
+}
+.team .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+.team .box {
+  position: relative;
+}
+.team .box::before,
+.team .box::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  right: 0;
+  top: 0;
+  border-radius: 10px;
+}
+.team .box::before {
+  z-index: -2;
+  width: calc(100% - 60px);
+  background-color: #f3f3f3;
+}
+.team .box::after {
+  z-index: -1;
+  width: 0;
+  background-color: #e4e4e4;
+  transition: var(--main-transition);
+}
+.team .box:hover::after {
+  width: calc(100% - 60px);
+}
+.team .box .data {
+  padding-top: 60px;
+  display: flex;
+  align-items: center;
+}
+.team .box .data img {
+  width: calc(100% - 60px);
+  height: auto;
+  border-radius: 10px;
+  transition: var(--main-transition);
+}
+.team .box:hover .data img {
+  filter: grayscale(100%);
+}
+.team .box .data .social {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  width: 60px;
+}
+.team .box .data .social a {
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.team .box .data .social a svg {
+  color: #777;
+  transition: var(--main-transition);
+}
+.team .box .data .social a:hover svg {
+  color: var(--main-color);
+}
+.team .box .info {
+  padding: 20px 20px 20px 80px;
+}
+.team .box .info h3 {
+  color: var(--main-color);
+  transition: var(--main-transition);
+}
+.team .box:hover .info h3 {
+  color: #666;
+}
+.team .box .info p {
+  margin-top: 10px;
+}

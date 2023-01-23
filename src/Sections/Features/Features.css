@@ -1,0 +1,117 @@
+.features {
+  padding: var(--main-padding);
+  position: relative;
+}
+.features .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+.features .box {
+  text-align: center;
+  border: 1px solid #ccc;
+}
+.features .box .image-holder {
+  position: relative;
+  overflow: hidden;
+}
+.features .box .image-holder::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: -1px;
+}
+.features .quality .image-holder::before {
+  background-color: rgb(244 64 54 / 60%);
+}
+.features .time .image-holder::before {
+  background-color: rgb(0 150 136 / 60%);
+}
+.features .passion .image-holder::before {
+  background-color: rgb(3 169 244 / 60%);
+}
+.features .box .image-holder::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-style: solid;
+  border-width: 0 0 170px 500px;
+  border-color: transparent transparent white transparent;
+  transition: var(--main-transition);
+}
+.features .box:hover .image-holder::after {
+  border-width: 170px 500px 250px 0;
+}
+.features .box .image-holder img {
+  max-width: 100%;
+  height: auto;
+}
+.features .box h2 {
+  font-size: 40px;
+  margin: auto;
+  position: relative;
+  width: fit-content;
+}
+.features .box h2::before {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 15%;
+  width: 70%;
+  height: 5px;
+}
+.features .quality h2::before {
+  background-color: #f44036;
+}
+.features .time h2::before {
+  background-color: #009688;
+}
+.features .passion h2::before {
+  background-color: #03a9f4;
+}
+.features .box p {
+  font-size: 20px;
+  line-height: 2;
+  margin: 30px auto;
+  padding: 25px;
+  color: #777;
+}
+.features .box a {
+  margin: 0 auto 30px;
+  display: block;
+  padding: 3px 30px;
+  width: fit-content;
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 6px;
+  border: 3px solid;
+  transition: var(--main-transition);
+}
+.features .box:hover a {
+  background-position: left bottom;
+  color: white;
+}
+.features .quality a {
+  border-color: #f44036;
+  color: #f44036;
+  background: linear-gradient(to right, #f44036 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+}
+.features .time a {
+  border-color: #009688;
+  color: #009688;
+  background: linear-gradient(to right, #009688 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+}
+.features .passion a {
+  border-color: #03a9f4;
+  color: #03a9f4;
+  background: linear-gradient(to right, #03a9f4 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+}
