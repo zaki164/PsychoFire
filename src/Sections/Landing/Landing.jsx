@@ -8,7 +8,7 @@ const Landing = () => (
   <section className="landing" id="landing">
     <div className="container">
       <div className="text">
-        <h1>Welcome, To Psycho World branch-mas</h1>
+        <h1>Welcome, To Psycho World branch-mast</h1>
         <p>Here Iam gonna share everything about my life. Books Iam reading, Games Iam Playing, Stories and
           Events</p>
       </div>
