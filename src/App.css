@@ -1,4 +1,6 @@
 @import 'https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap');
+
 :root {
   --main-color: #2196f3;
   --main-color-alt: #1787e0;
@@ -16,6 +18,9 @@ html {
 }
 body {
   font-family: "Cairo", sans-serif;
+}
+body.ar {
+  font-family: 'Open Sans', sans-serif;
 }
 ul {
   list-style: none;

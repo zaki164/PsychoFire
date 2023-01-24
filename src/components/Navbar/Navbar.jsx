@@ -5,8 +5,11 @@ import './Navbar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBuilding, faChartBar, faCheckCircle, faClipboard, faComments, faPlayCircle, faUser } from '@fortawesome/free-regular-svg-icons';
 import { faServer } from '@fortawesome/free-solid-svg-icons';
+import { useTranslation } from 'react-i18next';
 
 const Navbar = () => {
+  const [i18n] = useTranslation();
+
   const toggleref = useRef();
   const megaref = useRef();
   const stoppropa = (e) => {
@@ -32,6 +35,18 @@ const Navbar = () => {
         <ul className="main-nav">
           <li><NavLink exact='true' to="/Gallery">Gallery</NavLink></li>
           <li><NavLink exact='true' to="/Features">Features</NavLink></li>
+          {
+            i18n.language === 'en' ? <button onClick={() => {
+              document.documentElement.dir = 'rtl'
+              document.body.classList.add('ar')
+              i18n.changeLanguage('ar')
+              }} className='btn'>AR</button> : 
+            i18n.language === 'ar' ? <button onClick={() => {
+              document.documentElement.dir = 'ltr'
+              document.body.classList.remove('ar')
+              i18n.changeLanguage('en')
+              }} className='btn'>EN</button> : null
+          }
           <li><Link to='#/' ref={toggleref} onClick={handlemenu}>Other Links</Link>
             <div className="mega-menu" ref={megaref}>
               <div className="image">

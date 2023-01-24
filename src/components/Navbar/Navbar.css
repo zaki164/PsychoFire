@@ -1,3 +1,16 @@
+.btn {
+  display: block;
+  color: var(--main-color);
+  border: 2px solid var(--main-color);
+  margin: 30px auto 20px;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 15px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: var(--main-transition);
+  cursor: pointer;
+}
 .header {
   background-color: white;
   position: fixed;
