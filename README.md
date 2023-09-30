@@ -1,8 +1,8 @@
-
-![Psycho](https://github.com/zaki164/PsychoFire/assets/92805900/59538b97-f855-4462-9939-86a6a70fe79a)
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+![Psycho](https://github.com/zaki164/PsychoFire/assets/92805900/59538b97-f855-4462-9939-86a6a70fe79a)
 
 ## Available Scripts
 
